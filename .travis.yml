@@ -1,0 +1,9 @@
+services:
+  - docker
+script:
+  - docker-compose build
+branches:
+  only:
+    - develop
+notifications: null
+email: false
