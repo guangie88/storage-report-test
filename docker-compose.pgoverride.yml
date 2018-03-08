@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgres-ssl:
+    volumes:
+      - postgres-ssl-data:/var/lib/postgresql/data
+      - ./postgres-ssl/ssl/:/var/ssl/
+    restart: on-failure
+volumes:
+  postgres-ssl-data:
+    external: true
