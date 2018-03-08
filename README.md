@@ -45,6 +45,13 @@ to start all the services. The services are as follow:
     docker volume create postgres-ssl-data
     ```
 
+    then ensure that the `server.key` has the correct ownership and permissions:
+
+    ```bash
+    sudo chown 999.docker server.key
+    sudo chmod 600 server.key
+    ```
+
     then perform
 
     ```bash
