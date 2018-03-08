@@ -55,7 +55,7 @@ to start all the services. The services are as follow:
     then perform
 
     ```bash
-    docker-compose -f docker-compose.yml -f docker-compose.pgoverride.yml \
+    docker-compose -f docker-compose.yml -f docker-compose.pg-override.yml \
       up --build -d
     ```
 

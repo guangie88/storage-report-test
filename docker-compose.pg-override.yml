@@ -4,7 +4,6 @@ services:
     volumes:
       - postgres-ssl-data:/var/lib/postgresql/data
       - ./postgres-ssl/ssl/:/var/ssl/
-    restart: on-failure
 volumes:
   postgres-ssl-data:
     external: true
