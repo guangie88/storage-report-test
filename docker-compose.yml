@@ -40,8 +40,8 @@ services:
       - 50475:50475
     restart: on-failure
   postgres-ssl:
-    image: nimbustech/postgres-ssl:9.5
-    # image: guangie88/postgres-ssl:9.6-alpine
+    # image: nimbustech/postgres-ssl:9.5
+    image: guangie88/postgres-ssl:9.6-alpine
     ports:
       - 5432:5432
     environment:

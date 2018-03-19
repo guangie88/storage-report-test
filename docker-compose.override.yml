@@ -3,7 +3,7 @@ services:
   postgres-ssl:
     volumes:
       # - postgres-ssl-data:/var/lib/postgresql/data
-      - ./postgres-ssl/ssl/:/var/ssl/
+      # - ./postgres-ssl/ssl/:/var/ssl/
       - ./postgres-ssl/data/pg_hba.conf:/usr/share/postgresql/9.6/pg_hba.conf.sample
 volumes:
   postgres-ssl-data:
