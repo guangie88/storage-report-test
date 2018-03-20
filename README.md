@@ -44,13 +44,15 @@ to start all the services. The services are as follow:
     ```
     You should observe that the connection cannot be established, with an error
     remark `SSL off`.
-  * Custom SSL public and private keys may be used and be placed in `ssl/`, and
-    the override file `docker-compose.override.pg-ssl.yml` should be added.
-    You will need to ensure the permissions are set correct on the `server.key`.
+  * Custom SSL public and private keys may be used and be placed in
+    `postgres-ssl/ssl/`, and the override file
+    `docker-compose.override.pg-ssl.yml` should be added. You will need to
+    ensure the permissions are set correct on the `server.key`.
     ```bash
     sudo chown 70:70 *
     sudo chmod 600 server.key
     ```
+    Note that UID/GID `70` refers `postgres`.
   * The `pg_hba.conf` may also be customized at `data/`. To use the customized
     version, the override file `docker-compose.override.pg-hba.yml` should be
     added.
