@@ -48,7 +48,7 @@ to start all the services. The services are as follow:
     the override file `docker-compose.override.pg-ssl.yml` should be added.
     You will need to ensure the permissions are set correct on the `server.key`.
     ```bash
-    sudo chown 999.docker server.key
+    sudo chown 70:70 *
     sudo chmod 600 server.key
     ```
   * The `pg_hba.conf` may also be customized at `data/`. To use the customized
