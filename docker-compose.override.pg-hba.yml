@@ -1,0 +1,5 @@
+version: '2'
+services:
+  postgres-ssl:
+    volumes:
+      - ./postgres-ssl/data/pg_hba.conf:/usr/share/postgresql/9.6/pg_hba.conf.sample

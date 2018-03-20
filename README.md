@@ -33,31 +33,27 @@ to start all the services. The services are as follow:
   * The keytab file in `rs-hdfs-report.toml` matches the one used in this
     server.
 * `postgres-ssl`
-
-  * Postgres database server with SSL encryption enabled.
-  * The certificate and private key for the SSL handshaking are available in
-    `postgres-ssl/ssl/`. These are the same files as the ones used in
-    this image by default.
-  * For persisting the Postgres data and replacing the private key for the
-    running container, first create the volume:
-
+  * Postgres database server with SSL enabled. Clients may only connect to it
+    when SSL handshake authentication. The `psql` client might look like below.
     ```bash
-    docker volume create postgres-ssl-data
+    psql -h localhost -U postgres sslmode=require
     ```
-
-    then ensure that the `server.key` has the correct ownership and permissions:
-
+  * To verify that the `sslmode` is indeed used, you may run the following
+    ```bash
+    psql -h localhost -U postgres sslmode=disable
+    ```
+    You should observe that the connection cannot be established, with an error
+    remark `SSL off`.
+  * Custom SSL public and private keys may be used and be placed in `ssl/`, and
+    the override file `docker-compose.override.pg-ssl.yml` should be added.
+    You will need to ensure the permissions are set correct on the `server.key`.
     ```bash
     sudo chown 999.docker server.key
     sudo chmod 600 server.key
     ```
-
-    then perform
-
-    ```bash
-    docker-compose -f docker-compose.yml -f docker-compose.pg-override.yml \
-      up --build -d
-    ```
+  * The `pg_hba.conf` may also be customized at `data/`. To use the customized
+    version, the override file `docker-compose.override.pg-hba.yml` should be
+    added.
 
 ## How to observe
 
