@@ -1,0 +1,5 @@
+version: '2'
+services:
+  postgres-ssl:
+    volumes:
+      - ./postgres-ssl/ssl/:/var/ssl/
