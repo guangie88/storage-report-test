@@ -2,3 +2,9 @@ http.host: 0.0.0.0
 http.port: 9200
 transport.tcp.port: 9300
 xpack.security.enabled: false
+
+# for dejavu
+http.cors.allow-origin: "http://localhost:1358"
+http.cors.enabled: true
+http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+http.cors.allow-credentials: true

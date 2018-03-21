@@ -29,6 +29,12 @@ services:
     build: ./grafana/imports/
     depends_on:
       - grafana
+  dejavu:
+    image: appbaseio/dejavu:1.4.1
+    depends_on:
+      - elasticsearch
+    ports:
+      - 1358:1358
   hdfs-krb5:
     image: nlesc/xenon-hdfs-kerberos:latest
     ports:
