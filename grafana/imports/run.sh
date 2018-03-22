@@ -24,5 +24,5 @@ curl -s -i -u $USER:$PW -H "Content-Type: application/json" \
 
 curl -s -i -u $USER:$PW -H "Content-Type: application/json" \
     -X POST http://grafana:3000/api/dashboards/import \
-    -d '{"overwrite":true,"inputs":[{"name":"DS_ELASTICSEARCH","type":"datasource","pluginId":"elasticsearch","value":"elasticsearch"}],"dashboard":'"`cat /diagnostics.json | jq . -c`"'}' \
+    -d '{"overwrite":true,"inputs":[{"name":"DS_ELASTICSEARCH","type":"datasource","pluginId":"elasticsearch","value":"elasticsearch"}],"dashboard":'"`cat /monitoring-dashboard.json | jq . -c`"'}' \
     --retry $RETRY_COUNT > /dev/null
