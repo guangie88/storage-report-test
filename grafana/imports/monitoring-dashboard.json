@@ -55,7 +55,7 @@
   "hideControls": false,
   "id": null,
   "links": [],
-  "refresh": "15m",
+  "refresh": "10s",
   "rows": [
     {
       "collapse": false,
@@ -103,7 +103,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -135,7 +135,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -357,7 +357,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -389,7 +389,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -610,7 +610,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -642,7 +642,7 @@
                   "field": "datetime",
                   "id": "2",
                   "settings": {
-                    "interval": "15m",
+                    "interval": "10s",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -826,7 +826,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -856,5 +856,5 @@
   },
   "timezone": "",
   "title": "Monitoring",
-  "version": 16
+  "version": 6
 }
