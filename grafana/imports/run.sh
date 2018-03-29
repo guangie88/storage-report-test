@@ -34,7 +34,7 @@ curl -s -i -u $USER:$PW -H "Content-Type: application/json" \
     }' \
     --retry $RETRY_COUNT > /dev/null
 
-# for index docker
+# for index docker-*
 curl -s -i -u $USER:$PW -H "Content-Type: application/json" \
     -X POST $GRAFANA_URL/api/datasources \
     -d '
@@ -43,7 +43,7 @@ curl -s -i -u $USER:$PW -H "Content-Type: application/json" \
         "type":"elasticsearch",
         "url":"'$ELASTICSEARCH_URL'",
         "access":"proxy",
-        "database":"docker",
+        "database":"docker-*",
         "jsonData":{"timeField":"@timestamp"}
     }' \
     --retry $RETRY_COUNT > /dev/null
